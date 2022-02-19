@@ -1,0 +1,20 @@
+<div class="body">
+  <div class="login">
+    <mat-spinner class="spinner" diameter="40" *ngIf="carga"></mat-spinner>
+      <form (ngSubmit)="ingresar()" [formGroup]="formLogueo" *ngIf="!carga">
+        <img src="../../../assets/img/programador.png" width="40%">
+
+        <mat-form-field appearance="fill" class="ancho">
+          <mat-label>Usuario</mat-label>
+          <input matInput formControlName="usuario" >
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="ancho">
+          <mat-label>Clave</mat-label>
+          <input matInput formControlName="clave" type="password" >
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="ancho" type="submit">Ingresar</button>
+        <br/><br/>
+        <button mat-raised-button color="warn" class="ancho">Logueo con Google</button>
+      </form>
+  </div>
+</div>

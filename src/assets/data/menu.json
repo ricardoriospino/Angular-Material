@@ -1,0 +1,22 @@
+[
+  {
+    "nombre" : "Dashboard",
+    "redirect": "/dashboard"
+  },
+  {
+    "nombre" : "Pokemones",
+    "redirect": "/dashboard/pokemones"
+  },
+  {
+    "nombre" : "Reportes",
+    "redirect": "/dashboard/reportes"
+  },
+  {
+    "nombre" : "Prueba1",
+    "redirect": "/dashboard"
+  },
+  {
+    "nombre" : "Prueba2",
+    "redirect": "/dashboard"
+  }
+]

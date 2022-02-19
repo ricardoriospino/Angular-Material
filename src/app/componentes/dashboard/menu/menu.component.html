@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>App Pokemones</span>
+
+  <button *ngFor="let item of lstMenu" mat-button [routerLink]="item.redirect">{{item.nombre}}</button>
+
+  <!--<button mat-button routerLink="/dashboard/pokemones">Pokemones</button>
+  <button mat-button routerLink="/dashboard/reportes">Reportes</button>-->
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button routerLink="/logout" aria-label="Example icon button with a heart icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

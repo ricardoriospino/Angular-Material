@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-toolbar>
+      <span>Crear Pokemon </span>
+      <span class="example-spacer"></span>
+
+  </mat-toolbar>
+
+  <mat-card style="margin-top: 10px;">
+    <form  (ngSubmit)="formulario.form.valid &&
+    guardarPokemon()"  #formulario="ngForm" >
+      <mat-grid-list cols="4" rowHeight="70px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <mat-form-field class="ancho">
+            <mat-label>Nombre</mat-label>
+            <input matInput name="nombre" [(ngModel)]="objPokemon.nombre" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="3" [rowspan]="3">
+          <img src="../../../assets/img/programador.png" width="220" height="220">
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" >
+          <mat-form-field class="ancho" >
+            <mat-label>Tipo Pokemon</mat-label>
+            <mat-select   name="tipo" [(ngModel)]="objPokemon.tipo" required>
+              <mat-option value="Electrico">Electrico</mat-option>
+              <mat-option value="Fuego">Fuego</mat-option>
+              <mat-option value="Hierba">Hierba</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <button   type="submit" [disabled]="!formulario.form.valid"  mat-raised-button color="primary" style="margin-right: 20px;">Guardar</button>
+          <button mat-raised-button routerLink="/dashboard/pokemones">Volver</button>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </form>
+  </mat-card>
+</div>
+
